@@ -7,7 +7,12 @@ export default function App() {
     return (
         <div>
             {arr.map((singleElement)=>{
-                return<div>{ singleElement*2 }</div>
+             if(singleElement%2==0){
+                return<div> <strong>{singleElement*2}</strong></div>
+                }
+                else{
+                    return<div> <i>{singleElement*2}</i></div>
+                }
 
 
             }
