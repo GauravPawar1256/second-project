@@ -1,22 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
-    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let arr = [2, 3, 4, 6,12,84];
-    let result;
+    const [age, setAge] = useState();
+    function handleagechange(event) {
+        setAge(event.target.value)
+    }
+
     return (
         <div>
-            {arr.map((singleElement) => {
-               return <div>{a.map((grv) => {
-                    result = singleElement * grv;
-                    return (
-                        <span>{result+","}</span>
-                );
-                })}
-                </div>
-
-            })
-            }
+            <input name="age" value={age} onChange={handleagechange} />
+            <div>{age}</div>
         </div>
-    );
+    )
 }
