@@ -1,22 +1,22 @@
 import React from "react";
 
 export default function App() {
-    let arr = [1, 2, 2, 3];
-
-
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr = [2, 3, 4, 6,12,84];
+    let result;
     return (
         <div>
-            {arr.map((singleElement)=>{
-             if(singleElement%2==0){
-                return<div> <strong>{singleElement*2}</strong></div>
-                }
-                else{
-                    return<div> <i>{singleElement*2}</i></div>
-                }
+            {arr.map((singleElement) => {
+               return <div>{a.map((grv) => {
+                    result = singleElement * grv;
+                    return (
+                        <span>{result+","}</span>
+                );
+                })}
+                </div>
 
-
+            })
             }
-            )}
         </div>
     );
 }
